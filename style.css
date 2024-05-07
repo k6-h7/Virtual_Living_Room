@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.left-navi, .main, .right-navi{
+  position: absolute;
+}
+.left-navi {
+  background-color:rgba(0,0,0,0.4);
+  color: #fff;
+  width: 10%;
+  text-align: left;
+  z-index: 2;
+  height: 100vh;
+}
+.left-navi ul{
+  text-align: center;
+}
+.mainvisual{
+  height: 100vh;
+  z-index: 1;
+  background-image:url("img/living.jpg") top center / cover no-repeat;
+}
+
+.right-navi {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: right;
+  width: 10%;
+  z-index: 2;
+  height: 100vh;
+  right: 0px;
+}
+.right-navi ul{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+}
+.right-navi img{
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px 10px 10px 10px;
+}
