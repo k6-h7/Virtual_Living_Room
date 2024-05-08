@@ -8,8 +8,8 @@
   }
   
 #wrap {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .left-navi, .main, .right-navi{
@@ -29,7 +29,9 @@
 .mainvisual{
   height: 100vh;
   z-index: 1;
-  background-image:url("img/living.jpg") top center / cover no-repeat;
+  background-image: url(img/living.jpg);
+  background-size: cover;
+  background-position: top center;
 }
 
 .right-navi {
