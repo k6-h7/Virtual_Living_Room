@@ -22,9 +22,14 @@
   text-align: left;
   z-index: 2;
   height: 100vh;
+  text-align: center;
+}
+.left-navi img{
+  height: 60%;
+  padding-top: 10%;
 }
 .left-navi ul{
-  text-align: center;
+  height: 40%;
 }
 .mainvisual{
   height: 100vh;
