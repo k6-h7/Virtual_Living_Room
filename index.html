@@ -31,17 +31,25 @@
         <ul>
             <li>About</li>
             <li>Credit</li>
-            <li><img src="img/living.jpg" class="button" onclick="goClick()"></li>
-            <li><img src="img/sea.jpg" class="button" onclick="goClick()"></li>
-            <li><img src="img/forest.jpg" class="button" onclick="goClick()"></li>
-            <li><img src="img/green.jpg" class="button" onclick="goClick()"></li>
-            <li><img src="img/flower1.jpg" class="button" onclick="goClick()"></li>
-            <li><img src="img/flower2.jpg" class="button" onclick="goClick()"></li>
-            <li><img src="img/waterdrop.jpg" class="button" onclick="goClick()"></li>
-            <li><img src="img/random.jpg" class="button" onclick="goClick()"></li>
+            <li><img src="img/living.jpg" value="living" onClick="change_living()"></li>
+            <li><img src="img/sea.jpg" value="sea" onClick="change_sea()"></li>
+            <li><img src="img/forest.jpg" value="forest" onClick="change_forest()"></li>
+            <li><img src="img/green.jpg" value="green" onClick="change_green()"></li>
+            <li><img src="img/flower1.jpg" value="flower1" onClick="change_flower1()"></li>
+            <li><img src="img/flower2.jpg" value="flower2" onClick="change_flower2()"></li>
+            <li><img src="img/waterdrop.jpg" value="waterdrop" onClick="change_waterdrop()"></li>
+            <li><img src="img/random.jpg" value="random" onClick="change_random()"></li>
         </ul>
     </nav>
     <div class="mainvisual"></div>
 </div>
 </body>
+    <script type ="text/javascript">
+        function change_sea(){
+            document.querySelector('.mainvisual').style.backgroundImage = 'url("img/sea.jpg")';
+        }
+        function chenge_forest(){
+            document.querySelector('.mainvisual').style.backgroundImage = 'url("img/forest.jpg")';
+        }
+    </script>
 </html>

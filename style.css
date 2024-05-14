@@ -36,7 +36,7 @@
   z-index: 1;
   background-image: url(img/living.jpg);
   background-size: cover;
-  background-position: top center;
+  background-position: center;
 }
 
 .right-navi {
