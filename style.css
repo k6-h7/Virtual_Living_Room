@@ -47,6 +47,7 @@
   z-index: 2;
   height: 100vh;
   right: 0px;
+  overflow: auto;
 }
 .right-navi ul{
   text-align: center;
