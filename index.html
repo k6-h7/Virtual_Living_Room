@@ -14,22 +14,62 @@
     <nav class="left-navi">
         <img src="img/rogo.png">
         <ul>
-            <li><span class="material-symbols-outlined">
-                timer
-                </span></li>
-            <li><span class="material-symbols-outlined">
-                schedule
-                </span></li>
-            <li><span class="material-symbols-outlined">
-                edit_calendar
-                </span></li>
+            <li><input type="checkbox" id="toggle-timer" class="toggle">
+                <label for="toggle-timer" class="toggle-label">
+                    <span class="material-symbols-outlined">timer</span>
+                </label>
+                <div class="toggle-content">
+                    <div class="timer">
+                        <div class="timer-input">
+                          <input type="text" id="hours" value="0" />hr
+                          <input type="text" id="minutes" value="0" />min
+                          <input type="text" id="seconds" value="0" />sec
+                        </div>
+                        <p id="js-timerTime">00:00:00</p>
+                        <input id="js-timerStart" type="button" value="開始" />
+                        <input id="js-timerStop" type="button" value="停止" disabled />
+                        <input id="js-timerResset" type="button" value="リセット" disabled />
+                      </div>                      
+                </div>
+            </li>
+            <li><input type="checkbox" id="toggle-schedule" class="toggle">
+                <label for="toggle-schedule" class="toggle-label">
+                    <span class="material-symbols-outlined">schedule</span>
+                </label>
+                <div class="toggle-content">
+                    <div id="clock"></div>
+                    <div id="calendar"></div>
+                </div>
+            </li>
+            <li><input type="checkbox" id="toggle-edit-calendar" class="toggle">
+                <label for="toggle-edit-calendar" class="toggle-label">
+                    <span class="material-symbols-outlined">edit_calendar</span>
+                </label>
+                <div class="toggle-content">
+                    <p id="counterMessage"></p>
+                </div>
+            </li>
 
         </ul>
     </nav>
 
     <nav class="right-navi">
         <ul>
-            <li>About</li>
+            <li>    
+                <input type="checkbox" id="toggleCheckbox" class="toggle">
+                <label for="toggleCheckbox"><h2 class="right-text">About</h2></label>
+                <div class="toggle-content-right">
+                    <h3>About</h3>
+                    <p class="nomal">このWebサイトは、「忙しい毎日に安らぎの時間を作る」ことを目的としています。</p>
+                    <p class="nomal">リビングルームは、家族が集まるくつろぎの場であり、お客様を迎える公共の場所です。</p>
+                    <p class="nomal">実際に集まることはできませんが、様々な人がこのWebサイトに集まり</p>
+                    <p class="nomal">毎日に少しでも安らぎの時間を作るための生活の一部になると幸いです。</p>
+                    <h4>管理者について</h4>
+                    <p class="small">気を抜くことが苦手な人です。</p>
+                    <p class="small">忙しい毎日を送っている人に、毎日少しでも安らぐ時間を過ごしてほしいと思いこのサイトを制作しました。</p>
+                </div>
+            </li>
+            
             <li>Credit</li>
             <li><img src="img/living.jpg" value="living" class="button"></li>
             <li><img src="img/sea.jpg" value="sea" class="button"></li>
@@ -45,4 +85,7 @@
 </div>
 </body>
     <script src="js/mainvisual.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/counter.js"></script>
 </html>
