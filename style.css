@@ -62,12 +62,12 @@
 
 .toggle-content {
   display: none;
-  background-color: #e9e9e9;
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 10px;
   border-radius: 5px;
-  color: #000;
+  color: white;
   position: absolute;
-  left: 110%; /* 左に表示する位置を設定 */
+  left: 100%; /* 左に表示する位置を設定 */
   top: 0;
   width: 200px; /* コンテンツの幅を設定 */
   z-index: 1;
@@ -111,7 +111,7 @@
   z-index: 2;
   height: 100vh;
   right: 0px;
-  overflow: auto;
+  /*overflow: auto;*/
 }
 .right-navi ul{
   text-align: center;
@@ -119,7 +119,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-
+  overflow: auto;
 }
 .right-navi img{
   width: 60%;
@@ -144,21 +144,30 @@
 .toggle-content-right{
   display: none;
   font-size: 2vw;
-  background-color: #e9e9e9;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   text-align: left;
-  color: #000;
-  position: relative;
+  color: white;
+  position: absolute;
   top: 0;
   left: 10vw;
   width: 80vw;
   height: 100vh;
   z-index: 10;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: -90vw;
+}
+
+.center{
+  text-align: center;
+}
+
+.nomal, .small{
+  text-align: center;
 }
 
 /* チェックボックスがチェックされたときに展開するスタイル */
-.toggle:checked + label + .toggle-content {
+.toggle:checked + label + .toggle-content-right {
   display: block;
 }
 
