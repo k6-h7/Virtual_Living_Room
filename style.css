@@ -6,7 +6,9 @@
     list-style: none;
     text-decoration: none;
   }
-  
+
+
+/*wrap*/
 #wrap {
   width: 100%;
   margin: 0 auto;
@@ -111,7 +113,6 @@
   z-index: 2;
   height: 100vh;
   right: 0px;
-  /*overflow: auto;*/
 }
 .right-navi ul{
   text-align: center;
@@ -124,7 +125,7 @@
 .right-navi img{
   width: 60%;
   aspect-ratio: 1 / 1;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px ;
 }
 
 
@@ -140,6 +141,7 @@
 }
 .right-text{
   font-size: 2vw;
+  padding-top: 1vh;
 }
 .toggle-content-right{
   display: none;
@@ -157,17 +159,61 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin-left: -90vw;
 }
-
-.center{
-  text-align: center;
+.center-a{
+  text-align: left;
+  padding-top: 1.5vw;
+  padding-bottom: 0.5vw;
+  margin: 0 6vw
 }
-
-.nomal, .small{
-  text-align: center;
+.center{
+  text-align: left;
+  padding-top: 3vw;
+  padding-bottom: 0.5vw;
+  margin: 0 6vw
+}
+.center1{
+  text-align: left;
+  padding-top: 5vw;
+  padding-bottom: 0.5vw;
+  margin: 0 6vw
+}
+.small {
+  text-align: left;
+  margin: 0 7vw;
+  font-size: 1.7vw;
+}
+.blank{
+  padding: 20px;
 }
 
 /* チェックボックスがチェックされたときに展開するスタイル */
 .toggle:checked + label + .toggle-content-right {
   display: block;
+  overflow: auto;
 }
 
+/*スマホ横向き設定*/
+.info{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); 
+
+}
+p.vertical-info{
+  color: #fff;
+  text-align: center;
+  font-size: 6vw;
+
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@media screen and (orientation: landscape) {
+  .info{
+    display: none;
+  }
+  p.vertical-info { 
+    display: none;
+   }
+}
