@@ -171,12 +171,6 @@
   padding-bottom: 0.5vw;
   margin: 0 6vw
 }
-.center1{
-  text-align: left;
-  padding-top: 5vw;
-  padding-bottom: 0.5vw;
-  margin: 0 6vw
-}
 .small {
   text-align: left;
   margin: 0 7vw;
@@ -197,6 +191,8 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8); 
+  position: absolute;
+  z-index: 100;
 
 }
 p.vertical-info{
