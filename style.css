@@ -13,7 +13,9 @@
   width: 100%;
   margin: 0 auto;
 }
-
+body{
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
 
 /*leftnavi*/
 .left-navi, .main, .right-navi{
@@ -80,21 +82,35 @@
   display: block;
 }
 
+.toggle-content
 /*timer*/
 .timer-input {
   gap: 5px;
+  font-size: 0.5em;
 }
 .timer-input input {
   width: 3vw; 
   text-align: center;
 }
+#js-timerTime{
+  font-size: 1.5em;
+}
+#js-timerStart, #js-timerStop, #js-timerResset{
+  font-size: 0.5em;
+}
+
 
 
 /*clock*/
 #clock, #calendar{
   text-align: center;
 }
-
+#clock{
+  font-size: 1.5em;
+}
+#calendar{
+  font-size: 0.8em;
+}
 
 /*mainvisual*/
 .mainvisual{
