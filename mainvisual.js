@@ -2,7 +2,6 @@ const buttons = document.querySelectorAll('.button');
 const mainvisual = document.querySelector('.mainvisual');
 let intervalId; // setIntervalのIDを格納する変数
 
-
 // サムネイル画像と同じ画像をメインビジュアルに表示する
 buttons.forEach(button => {
   button.addEventListener('click', function() {
@@ -41,12 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
       clearInterval(intervalId);
     }
     intervalId = setInterval(backgroundRandom, 20000); // 20000ms（20秒）ごとにランダム切り替えを繰り返す
-
     // 初回のランダム表示
     backgroundRandom();
-
   });
 
 });
-
 
