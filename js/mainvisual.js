@@ -12,9 +12,6 @@ buttons.forEach(button => {
     if (intervalId) {
       clearInterval(intervalId);
     }
-
-    // クッキーに設定
-    Cookies.set('backgroundChanged', true);
   });
 });
 
@@ -43,18 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
       clearInterval(intervalId);
     }
     intervalId = setInterval(backgroundRandom, 20000); // 20000ms（20秒）ごとにランダム切り替えを繰り返す
-
     // 初回のランダム表示
     backgroundRandom();
-
-    // クッキーに設定
-    Cookies.set('backgroundChanged', true);
   });
 
-  // クッキーをチェックして、二回目以降の訪問時にのみランダム表示を行う
-  if (Cookies.get('backgroundChanged')) {
-    backgroundRandom();
-  }
 });
-
 
