@@ -162,10 +162,12 @@ body{
   aspect-ratio: 1 / 1;
   border-radius: 10px ;
 }
+.right-navi img:hover{
+  opacity: 0.7;
+}
 
 
 /*右のabout*/
-
 .taggle-label-right{
   display: block;
   cursor: pointer;
@@ -177,6 +179,9 @@ body{
 .right-text{
   font-size: 2vw;
   padding-top: 1vh;
+}
+.right-text:hover {
+  background-color: #0056b3;
 }
 .toggle-content-right{
   display: none;
@@ -208,7 +213,7 @@ body{
 }
 .small {
   text-align: left;
-  margin: 0 7vw;
+  margin: 0 6vw;
   font-size: 1.7vw;
 }
 .blank{

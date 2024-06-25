@@ -12,26 +12,49 @@ buttons.forEach(button => {
     if (intervalId) {
       clearInterval(intervalId);
     }
+
+    // クッキーに設定
+    Cookies.set('backgroundChanged', true);
   });
 });
 
 // ランダム部分
-var images = [ 'url(img/living.jpg)', 'url(img/sea.jpg)', 'url(img/forest.jpg)', 'url(img/green.jpg)', 'url(img/flower1.jpg)', 'url(img/flower2.jpg)', 'url(img/waterdrop.jpg)' ];  // ランダム表示させたい画像のパス
+var images = [
+  'url(img/living.jpg)',
+  'url(img/sea.jpg)',
+  'url(img/forest.jpg)',
+  'url(img/green.jpg)',
+  'url(img/flower1.jpg)',
+  'url(img/flower2.jpg)',
+  'url(img/waterdrop.jpg)'
+]; // ランダム表示させたい画像のパス
 
 document.addEventListener("DOMContentLoaded", function() {
-    var backgroundRandom = function() {
-        var number = Math.floor(Math.random() * images.length); // 画像分の数値を算出 
-        var selectedImg = images[number]; // 算出された数値を元に、1行目の配列から取り出す
-        document.querySelector('.mainvisual').style.backgroundImage = selectedImg; // cssにランダムに選ばれた画像を背景設定する
-    };
+  var backgroundRandom = function() {
+    var number = Math.floor(Math.random() * images.length); // 画像分の数値を算出 
+    var selectedImg = images[number]; // 算出された数値を元に、1行目の配列から取り出す
+    document.querySelector('.mainvisual').style.backgroundImage = selectedImg; // cssにランダムに選ばれた画像を背景設定する
+  };
 
-    var startButton = document.getElementById("startButton");
-    startButton.addEventListener("click", function() {
-        // ランダム切り替えが既に動作している場合、まず停止する
-        if (intervalId) {
-            clearInterval(intervalId);
-        }
-        intervalId = setInterval(backgroundRandom, 20000);  // 20000ms（20秒）ごとにランダム切り替えを繰り返す
-    });
+  var startButton = document.getElementById("startButton");
+  startButton.addEventListener("click", function() {
+    // ランダム切り替えが既に動作している場合、まず停止する
+    if (intervalId) {
+      clearInterval(intervalId);
+    }
+    intervalId = setInterval(backgroundRandom, 20000); // 20000ms（20秒）ごとにランダム切り替えを繰り返す
+
+    // 初回のランダム表示
+    backgroundRandom();
+
+    // クッキーに設定
+    Cookies.set('backgroundChanged', true);
+  });
+
+  // クッキーをチェックして、二回目以降の訪問時にのみランダム表示を行う
+  if (Cookies.get('backgroundChanged')) {
+    backgroundRandom();
+  }
 });
+
 
